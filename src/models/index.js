@@ -12,8 +12,6 @@ const client = new Client({
 
 // Below is a query for all exercises that use dumbbells
 // "select * from exercises inner join equipment_exercise on equipment_exercise.exercise_id=exercises.id where equipment_exercise.equipment_id=(SELECT id FROM equipment WHERE equipment.name='dumbbells');"
-
-
 client.connect()
   .then(() => console.log("Connected to the DB"))
   .then(() => client.query("select * from exercises inner join equipment_exercise on equipment_exercise.exercise_id=exercises.id where equipment_exercise.equipment_id=(SELECT id FROM equipment WHERE equipment.name='dumbbells');"))
