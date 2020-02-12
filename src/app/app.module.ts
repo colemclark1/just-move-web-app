@@ -3,18 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
 import {routing} from './app.routing';
+import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from './material/material.module';
+import { NewWorkoutComponent } from './new-workout/new-workout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    HomeComponent,
+    NewWorkoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    routing
+    routing,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

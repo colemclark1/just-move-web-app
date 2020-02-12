@@ -1,0 +1,18 @@
+<div class='container'>
+
+  <mat-toolbar color="primary">
+    <span>Application Title</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <span>Right Aligned Text</span>
+  </mat-toolbar>
+
+<h1>Workout Tracker</h1>
+
+<button mat-raised-button color='primary' [routerLink]="['/new-workout']">Add New Workout</button>
+
+<ul><li *ngFor='let exercise of exercises'>{{exercise.name}}</li></ul>
+
+</div>
