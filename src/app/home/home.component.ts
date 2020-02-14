@@ -8,6 +8,7 @@ import { HostListener  } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   exercises = []
+  workouts = []
 
   handleClick(){
 
@@ -21,6 +22,11 @@ export class HomeComponent implements OnInit {
     fetch(`http://localhost:4000/exercises`).then(response => {
       return response.json()
     }).then(result => this.exercises = result);
+
+    fetch(`http://localhost:4000/workouts`).then(response => {
+      return response.json()
+    }).then(result => this.workouts = result);
+
   }
 
 }

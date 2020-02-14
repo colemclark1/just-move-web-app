@@ -11,6 +11,24 @@
 
 <h1>Workout Tracker</h1>
 
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>DB Crusher</mat-card-title>
+    <mat-card-subtitle>AMRAP</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      <b>3 Rounds for time</b><br/>
+      &ensp;hello
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
 <button mat-raised-button color='primary' [routerLink]="['/new-workout']">Add New Workout</button>
 
 <ul><li *ngFor='let exercise of exercises'>{{exercise.name}}</li></ul>
